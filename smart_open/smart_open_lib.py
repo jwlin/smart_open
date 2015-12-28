@@ -107,7 +107,7 @@ def smart_open(uri, mode="rb", **kw):
     # validate mode parameter
     if not isinstance(mode, six.string_types):
         raise TypeError('mode should be a string')
-    if not mode in ('r', 'rb', 'w', 'wb'):
+    if not mode in ('r', 'rb', 'w', 'wb', 'wb+'):
         raise NotImplementedError('unknown file mode %s' % mode)
 
     if isinstance(uri, six.string_types):
